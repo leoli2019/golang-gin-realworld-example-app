@@ -7,6 +7,7 @@ import (
 	"golang-gin-realworld-example-app/common"
 	"golang-gin-realworld-example-app/users"
 	"gopkg.in/gin-gonic/gin.v1"
+	"time"
 )
 
 func Migrate(db *gorm.DB) {
@@ -50,8 +51,8 @@ func main() {
 	// test 1 to 1
 	tx1 := db.Begin()
 	userA := users.UserModel{
-		Username: "AAAAAAAAAAAAAAAA",
-		Email:    "gggggg@g.cn",
+		Username: "mike" + time.Now().String(),
+		Email:    "mike" + time.Now().String() + "@g.cn",
 		Bio:      "hehddeda",
 		Image:    nil,
 	}

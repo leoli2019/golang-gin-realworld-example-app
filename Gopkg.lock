@@ -39,7 +39,7 @@
 
 [[projects]]
   name = "github.com/jinzhu/gorm"
-  packages = [".","dialects/postgres","dialects/sqlite"]
+  packages = [".","dialects/postgres"]
   revision = "836fb2c19d84dac7b0272958dfb9af7cf0d0ade4"
   version = "v1.9.10"
 
@@ -66,12 +66,6 @@
   packages = ["."]
   revision = "1311e847b0cb909da63b5fecfb5370aa66236465"
   version = "v0.0.8"
-
-[[projects]]
-  name = "github.com/mattn/go-sqlite3"
-  packages = ["."]
-  revision = "b612a2feea6aa87c6d052d9086572551df06497e"
-  version = "v1.11.0"
 
 [[projects]]
   name = "github.com/modern-go/concurrent"
@@ -110,12 +104,6 @@
   version = "v1.1.7"
 
 [[projects]]
-  name = "github.com/wangzitian0/golang-gin-starter-kit"
-  packages = ["articles","common","users"]
-  revision = "9423bbefbc22d77939a18069037a3f08fd4f5592"
-  version = "0.0.6"
-
-[[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["bcrypt","blowfish"]
@@ -148,6 +136,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "3aad8b0c208d587a2da539fbf54984c52df8476907dfc1a9b629a104a2f037d0"
+  inputs-digest = "03b9583181977e60125aca26c19a99a2792d9091b4e65625835a557efec020b4"
   solver-name = "gps-cdcl"
   solver-version = 1
