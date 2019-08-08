@@ -2,8 +2,8 @@ package articles
 
 import (
 	"github.com/gosimple/slug"
-	"github.com/wangzitian0/golang-gin-starter-kit/common"
-	"github.com/wangzitian0/golang-gin-starter-kit/users"
+	"golang-gin-realworld-example-app/common"
+	"golang-gin-realworld-example-app/users"
 	"gopkg.in/gin-gonic/gin.v1"
 )
 

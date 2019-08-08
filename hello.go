@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-
-	"gopkg.in/gin-gonic/gin.v1"
-
 	"github.com/jinzhu/gorm"
-	"github.com/wangzitian0/golang-gin-starter-kit/articles"
-	"github.com/wangzitian0/golang-gin-starter-kit/common"
-	"github.com/wangzitian0/golang-gin-starter-kit/users"
+	"golang-gin-realworld-example-app/articles"
+	"golang-gin-realworld-example-app/common"
+	"golang-gin-realworld-example-app/users"
+	"gopkg.in/gin-gonic/gin.v1"
 )
 
 func Migrate(db *gorm.DB) {
@@ -29,6 +27,7 @@ func main() {
 	r := gin.Default()
 
 	v1 := r.Group("/api")
+
 	users.UsersRegister(v1.Group("/users"))
 	v1.Use(users.AuthMiddleware(false))
 	articles.ArticlesAnonymousRegister(v1.Group("/articles"))
@@ -52,7 +51,7 @@ func main() {
 	tx1 := db.Begin()
 	userA := users.UserModel{
 		Username: "AAAAAAAAAAAAAAAA",
-		Email:    "aaaa@g.cn",
+		Email:    "gggggg@g.cn",
 		Bio:      "hehddeda",
 		Image:    nil,
 	}
@@ -69,5 +68,6 @@ func main() {
 	//}).First(&userAA)
 	//fmt.Println(userAA)
 
-	r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run(":9527") // listen and serve on 0.0.0.0:8080
+
 }

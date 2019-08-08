@@ -2,7 +2,7 @@ package users
 
 import (
 	"errors"
-	"github.com/wangzitian0/golang-gin-starter-kit/common"
+	"golang-gin-realworld-example-app/common"
 	"gopkg.in/gin-gonic/gin.v1"
 	"net/http"
 )
@@ -21,6 +21,10 @@ func ProfileRegister(router *gin.RouterGroup) {
 	router.GET("/:username", ProfileRetrieve)
 	router.POST("/:username/follow", ProfileFollow)
 	router.DELETE("/:username/follow", ProfileUnfollow)
+}
+
+func GetInfo(router *gin.RouterGroup) {
+	router.GET("/:username", ProfileRetrieve)
 }
 
 func ProfileRetrieve(c *gin.Context) {
